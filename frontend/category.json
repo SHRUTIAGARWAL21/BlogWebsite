@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "name": "Every canvas is a journey all its own",
+      "image": "https://m.media-amazon.com/images/I/71cTNCEFrxL.jpg",
+      "description": "Explore a world of creative expression through paintings, sculptures, and various art forms."
+    },
+    {
+      "name": "Pages are windows to new worlds",
+      "image": "https://img.freepik.com/premium-photo/book-flowers_1048944-11382944.jpg",
+      "description": "Dive into a collection of books across various genres, from fiction to non-fiction."
+    },
+    {
+      "name": "Good food is good mood.",
+      "image": "https://i.pinimg.com/736x/90/82/6e/90826e8f608c127fbc3411b34bb3287f.jpg",
+      "description": "Discover mouth-watering recipes, cooking tips, and food culture from around the world."
+    },
+    {
+      "name": "Innovation in every click.",
+      "image": "https://www.shutterstock.com/image-photo/flatlay-person-hands-working-on-600nw-2085739492.jpg",
+      "description": "Stay updated with the latest in technology, gadgets, and innovations shaping the future."
+    },
+    {
+      "name": "Wanderlust is a way of life",
+      "image": "https://d2bzx2vuetkzse.cloudfront.net/unshoppable_producs/cedbdd09-7682-4376-b642-42b76cadcde9.png",
+      "description": "Explore travel destinations, tips, and adventures for your next vacation or journey."
+    }
+  ]
+}

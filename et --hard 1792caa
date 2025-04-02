@@ -1,0 +1,8 @@
+[33m682e94e[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: pull origin main --rebase (start): checkout 682e94e1506e88fc2a61d4b74c6695963adf6f9d
+[33m1792caa[m[33m ([m[1;32mmain[m[33m)[m HEAD@{1}: commit: added frontend
+[33m0a6e2d4[m HEAD@{2}: commit: Added .gitignore and removed node_modules
+[33me33bcce[m HEAD@{3}: commit: Removed frontend as a submodule and re-added it as a normal directory
+[33m9f75cb2[m HEAD@{4}: commit: initial commit
+[33mca020c6[m HEAD@{5}: pull origin main --allow-unrelated-histories: Merge made by the 'ort' strategy.
+[33me251ad3[m HEAD@{6}: Branch: renamed refs/heads/main to refs/heads/main
+[33me251ad3[m HEAD@{8}: commit (initial): Initial commit of blogApp project

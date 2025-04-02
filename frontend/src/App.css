@@ -1,0 +1,878 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fadfc9; /* Beige background */
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Title & Subtitle */
+.header {
+  margin-top: 10px; /* Space above the cover image */
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  color: #5a3e2b;
+  /* Brown color */
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+  opacity: 0.9;
+  color: #5a3e2b; /* Brown color */
+  margin-bottom: 10px;
+}
+
+/* Hero Section (Image + Overlay) */
+.hero {
+  width: 100%;
+  height: 60vh;
+  background: url("https://i.pinimg.com/736x/46/9d/61/469d61dacea4cbd608232e36d6e22bc7.jpg")
+    no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+}
+
+/* Navigation Bar (Top Right) */
+.nav-bar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid white;
+  transition: 0.3s ease;
+}
+
+.logout-header {
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid white;
+  transition: 0.3s ease;
+}
+
+.logout-header:hover {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Adds semi-transparent white on hover */
+}
+.nav-bar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Quote on Left Side */
+/* Quote on Left Side */
+.quote {
+  position: absolute;
+
+  left: 100px;
+  bottom: 160px;
+  color: #5a3e2b; /* Brown color */
+  font-style: italic;
+  font-size: 2.5rem; /* Bigger Font */
+  font-weight: 500;
+  text-align: left;
+  max-width: 40%; /* Restrict width to less than half */
+  line-height: 1.3; /* Adjust line height for better readability */
+  word-wrap: break-word; /* Ensure words wrap */
+}
+
+.quote-author {
+  position: absolute;
+  left: 150px;
+  bottom: 130px;
+  color: #5a3e2b; /* Brown color */
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Footer Styling */
+
+.footer-quote {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 80px;
+  color: #5c3d2e;
+  justify-content: center;
+}
+.footer {
+  background: #5c3d2e; /* Dark background */
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e25829;
+}
+
+/* Navigation Links */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 13px;
+
+  margin-bottom: 10px;
+}
+
+.footer-nav a,
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-nav a:hover,
+.footer-links a:hover {
+  color: #471a0d;
+}
+
+/* Full-screen container */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fadfc9;
+}
+
+/* Centered box with background image */
+.login-box {
+  display: flex;
+  width: 60%;
+  height: 70vh;
+  background: url("https://i.pinimg.com/736x/de/e3/81/dee3811137d8415e47264ebbfa44ceeb.jpg")
+    no-repeat center center/cover;
+  border-radius: 15px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Left side - Welcome text */
+.welcome-section {
+  flex: 0.4; /* 40% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #5c3d2e;
+  font-family: "Dancing Script", cursive;
+}
+
+/* Right side - Login form */
+.login {
+  flex: 0.6; /* 60% width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* White semi-transparent form background */
+  padding: 40px;
+  border-radius: 0px 15px 15px 0px;
+}
+
+/* Form Inputs */
+.login input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f3e1c9;
+}
+
+/* Button */
+.login button {
+  width: 100%;
+  padding: 12px;
+  background: #5c3d2e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background: #3d2a20;
+}
+
+/* Full-screen container */
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fadfc9;
+  /* Light beige background */
+}
+
+/* Centered box with background image */
+.register-box {
+  display: flex;
+  width: 60%;
+  height: 70vh;
+  background: url("https://i.pinimg.com/736x/de/e3/81/dee3811137d8415e47264ebbfa44ceeb.jpg")
+    no-repeat center center/cover;
+  border-radius: 15px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Left side - Welcome text */
+.welcome-section {
+  flex: 0.4; /* 40% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.welcome-section h1 {
+  font-size: 2.9rem;
+  font-weight: bold;
+  color: #5c3d2e;
+  font-family: "Dancing Script", cursive;
+}
+
+/* Right side - Register form */
+.register {
+  flex: 0.6; /* 60% width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* White semi-transparent form background */
+  padding: 40px;
+  border-radius: 0px 15px 15px 0px;
+}
+
+/* Form Inputs */
+.register input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f3e1c9;
+}
+
+/* Button */
+.register button {
+  width: 100%;
+  padding: 12px;
+  background: #5c3d2e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.register button:hover {
+  background: #3d2a20;
+}
+
+.blog-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  padding-bottom: 10px;
+  background: url("https://i.pinimg.com/736x/de/e3/81/dee3811137d8415e47264ebbfa44ceeb.jpg")
+    no-repeat center center/cover;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: bolder;
+  color: #5a3e2b;
+  text-decoration: none;
+  font-family: "Dancing Script", cursive;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 400px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 2px solid #a27151;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  color: white;
+}
+
+.search-bar::placeholder {
+  color: #5a3e2b;
+}
+
+.login-btn {
+  background: transparent;
+  border: 2px solid #a27151;
+  padding: 8px 14px;
+  color: #5a3e2b;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adjusts spacing between buttons */
+}
+
+.create,
+.logout-btn {
+  background: transparent;
+  border: 2px solid #a27151;
+  padding: 8px 14px;
+  color: #5a3e2b;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create:hover,
+.logout-btn:hover {
+  background: #7d502f; /* Brown hover */
+  color: white;
+}
+
+.login-btn:hover {
+  background: #7d502f; /* Brown hover */
+  color: white;
+}
+
+.blog-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1000px;
+  margin-top: 40px;
+  margin-left: 250px;
+}
+
+.blog-post {
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(170, 140, 120);
+}
+
+.blog-post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Image */
+.blog-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Blog Text */
+.blog-texts {
+  padding: 12px 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.blog-texts a {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Keeps the color same as the parent element */
+}
+
+.blog-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 8px;
+  font-family: "Dancing Script", cursive;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blog-author {
+  font-size: 13px;
+  color: rgb(245, 197, 197);
+  margin-top: 5px;
+}
+
+.blog-time {
+  font-size: 11px;
+  color: #644027;
+}
+
+.blog-summary {
+  font-size: 14px;
+  color: rgb(247, 215, 198);
+  margin-top: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* General Form Styling */
+.create-post-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fadfc9;
+}
+
+.create-post-form {
+  background-color: #f1caab;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Heading */
+.create-post-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #644027;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Input Fields */
+.create-post-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.create-post-input:focus {
+  color: #644027; /* Blue focus */
+  outline: none;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+}
+
+/* File Upload */
+.create-post-file {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Quill Editor */
+.ql-container {
+  border-radius: 6px;
+  border: 1px solid #ddd !important;
+  min-height: 150px;
+}
+
+/* Submit Button */
+.create-post-button {
+  width: 100%;
+  background-color: #644027; /* Blue */
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f5e1c5; /* Beige background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #5c3d2e; /* Brown text */
+}
+
+.post-container .author {
+  color: #5c3d2e; /* Brown text */
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+/* Image styling */
+.post-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Title styling */
+.post-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 35px;
+  font-weight: bold;
+  color: #5c3d2e; /* Brown text */
+  text-align: center;
+  margin: 20px 0;
+}
+
+.summary {
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  max-width: 800px;
+  text-align: left;
+}
+
+.summary h3 {
+  font-size: 25px;
+  color: #8b5e3b; /* Warm brown */
+  margin-bottom: 10px;
+  font-weight: 100;
+  font-family: "Dancing Script", cursive;
+}
+
+.summary div {
+  font-size: 16px;
+  color: #a76a6a; /* Dark text for readability */
+  line-height: 1.6;
+  font-family: "Dancing Script", cursive;
+}
+
+/* Content styling */
+.post-content {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a2e19; /* Dark brown text */
+  padding: 10px;
+  padding-top: 20px;
+  font-style: oblique;
+}
+
+/* Loading text */
+.loading {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px;
+  color: #775b42;
+}
+
+/* Edit link styling */
+.edit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 6px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #5c3d2e; /* Dark brown text */
+  background-color: #f5e1c5; /* Beige background */
+  border: 2px solid #5c3d2e; /* Dark brown border */
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.edit-link:hover {
+  background-color: #5c3d2e; /* Dark brown background on hover */
+  color: #f5e1c5; /* Beige text on hover */
+}
+
+.edit-link svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+/* Center the content and give a little padding */
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Reduced gap */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* Styling each category item */
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px; /* Reduced gap */
+  background-color: #5c3d2e; /* Light background for each category */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 400px;
+}
+
+/* Image styling */
+.category-item img {
+  width: 35%; /* Reduced image size */
+  height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Content styling */
+.category-content {
+  width: 60%; /* Reduced content width */
+  color: #d3d3d3; /* Light text color */
+}
+
+.category-content h2 {
+  font-size: 25px; /* Reduced font size */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f5e1c5;
+}
+
+.category-content p {
+  font-size: 14px; /* Reduced font size */
+  line-height: 1.4;
+  color: #d3d3d3; /* Light text color */
+}
+
+/* Alternating layout */
+.left-right {
+  flex-direction: row;
+}
+
+.right-left {
+  flex-direction: row-reverse;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .category-item img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .category-content {
+    width: 100%;
+  }
+}
+
+/* Post Container */
+.post-container {
+  background-color: transparent;
+  box-shadow: none;
+  margin-top: 0px;
+}
+
+.featured-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 40px;
+  justify-content: center;
+  padding: 10px 5%;
+  margin-top: none;
+}
+
+/* Polaroid Post Styling */
+.post {
+  background: rgb(241, 202, 178);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  width: 260px; /* Polaroid size */
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Image Section */
+.post .image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  padding-top: 20px;
+  background: rgb(241, 202, 178);
+}
+
+.post .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Title Styling */
+.post .texts a {
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+  color: #59483c; /* Brown color */
+  margin-bottom: 20px;
+  padding-top: 20px;
+  text-decoration: none; /* Removes underline */
+  display: block;
+}
+
+/* Hover Effect (Optional) */
+.post .texts a:hover {
+  text-decoration: none; /* Ensures no underline on hover */
+  color: darkbrown; /* Slightly darker shade on hover */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .featured-posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-posts {
+    grid-template-columns: 1fr;
+  }
+}
+
+.heading {
+  display: flex;
+  gap: 20px;
+  padding-left: 630px;
+  margin-bottom: none;
+}
+
+.main-title {
+  padding-top: 40px;
+  font-size: 45px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 100;
+  color: #a27151;
+}
+
+.sub-main-title {
+  padding-top: 60px;
+  font-weight: 100;
+  color: #4f3a2c;
+}
+
+.profile-link {
+  background: transparent;
+  border: 2px solid #a27151;
+  padding: 2px 10px;
+  color: #5a3e2b;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

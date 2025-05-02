@@ -63,3 +63,37 @@ exports.profile = (req, res) => {
     res.json(info);
   });
 };
+
+//get user info
+exports.getUserById = (req, res) => {
+  const { token } = req.cookies;
+  const { id } = req.params;
+
+  if (!token) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  jwt.verify(token, secret, {}, async (err, decoded) => {
+    if (err) {
+      return res.status(403).json({ error: "Invalid token" });
+    }
+
+    if (decoded.id !== id) {
+      return res
+        .status(403)
+        .json({ error: "Forbidden: You can only access your own data" });
+    }
+
+    try {
+      const user = await User.findById(id).select("username");
+      if (!user) {
+        return res.status(404).json({ error: "user not found" });
+      }
+
+      res.json(user);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: "server error" });
+    }
+  });
+};

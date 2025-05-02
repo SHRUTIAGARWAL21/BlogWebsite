@@ -84,3 +84,14 @@ exports.getPostById = async (req, res) => {
   const PostDoc = await Post.findById(id).populate("author", ["username"]);
   res.json(PostDoc);
 };
+
+exports.getUserPost = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const posts = await Post.find({ author: id }).sort({ createdAt: -1 });
+    res.json(posts);
+  } catch (err) {
+    console.error("Error fetching user posts:", err);
+    res.status(500).json({ error: "Server error" });
+  }
+};

@@ -431,7 +431,7 @@ body {
 .blog-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 15px;
+  gap: 25px;
   padding: 20px;
   max-width: 1000px;
   margin-top: 40px;
@@ -875,4 +875,45 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.profile-nav {
+  display: flex;
+  align-items: center; /* This restricts vertical movement */
+}
+
+.profile-nav .logo {
+  margin-top: 4px; /* might not work */
+  padding-top: 8px; /* more reliable in flex row */
+  padding-left: 20px;
+}
+
+.profile-icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.profile-svg {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 16px;
+}
+
+.user-info {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.user-info h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  margin: 6px 0;
+  color: #5a3e2b;
+}
+
+.user-info h3 {
+  font-size: 1.2rem;
+  color: #7a5d44;
 }

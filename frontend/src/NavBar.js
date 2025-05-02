@@ -4,7 +4,7 @@ import { AuthContext } from "./AuthContext";
 
 export default function NavBar() {
   const { user, logout } = useContext(AuthContext);
-  console.log(user);
+
   const location = useLocation(); // Get the current route
 
   return (

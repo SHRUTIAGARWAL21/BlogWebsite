@@ -21,7 +21,10 @@ router.put(
   postController.updatePosts
 );
 
-//get post by if
+//get post by id
 router.get("/post/:id", postController.getPostById);
+
+//get post of user using userId
+router.get("/:id", postController.getUserPost);
 
 module.exports = router;

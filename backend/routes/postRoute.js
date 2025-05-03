@@ -25,6 +25,9 @@ router.put(
 router.get("/post/:id", postController.getPostById);
 
 //get post of user using userId
-router.get("/:id", postController.getUserPost);
+router.get("/searchByUser/:id", postController.getUserPost);
+
+//get post as per search
+router.get("/search", postController.searchPosts);
 
 module.exports = router;

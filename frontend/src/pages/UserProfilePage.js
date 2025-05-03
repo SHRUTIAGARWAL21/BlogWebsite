@@ -35,7 +35,7 @@ export default function UserProfilePage() {
   useEffect(() => {
     const fetchUserPosts = async () => {
       try {
-        const response = await fetch(`${apiUrl}/post/${id}`);
+        const response = await fetch(`${apiUrl}/post/searchByUser/${id}`);
         if (!response.ok) {
           throw new Error("User not found");
         }

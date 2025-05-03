@@ -95,3 +95,27 @@ exports.getUserPost = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
+exports.searchPosts = async (req, res) => {
+  console.log(req.query);
+  const term = req.query.q;
+  const sanitizedTerm = term
+    ? term.replace(/[.*+?^=!:${}()|\[\]\/\\]/g, "\\$&")
+    : "";
+
+  console.log("search term", sanitizedTerm);
+
+  try {
+    const results = await Post.find({
+      $or: [
+        { title: { $regex: term, $options: "i" } },
+        { content: { $regex: term, $options: "i" } },
+        { summary: { $regex: term, $options: "i" } },
+      ],
+    });
+    res.json(results);
+  } catch (err) {
+    //console.error("Search failed:", err.stack);
+    res.status(500).json({ message: "Search failed", error: err.message });
+  }
+};

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function BlogPage() {
   const { user, logout } = useContext(AuthContext);
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <main className="blog-container">
@@ -13,7 +14,13 @@ export default function BlogPage() {
         <Link to="/" className="logo">
           EchoWrite
         </Link>
-        <input type="text" placeholder="Search..." className="search-bar" />
+        <input
+          type="text"
+          placeholder="Search..."
+          className="search-bar"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
 
         <div className="button-container">
           {user ? (
@@ -36,7 +43,7 @@ export default function BlogPage() {
         </div>
       </nav>
       <section className="blog-content">
-        <BlogPosts />
+        <BlogPosts searchTerm={searchTerm} />
       </section>
     </main>
   );

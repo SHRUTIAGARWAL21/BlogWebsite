@@ -16,9 +16,10 @@ export default function BlogPosts({ searchTerm }) {
           : `${apiUrl}/post/post`;
 
         try {
-          const res = await fetch(endPoint, { signal });
+          const res = await fetch(endPoint, { signal, credentials: "include" });
           const data = await res.json();
           setPosts(data);
+          console.log(data);
         } catch (err) {
           if (err.name === "AbortError") {
             console.log("Fetch aborted");

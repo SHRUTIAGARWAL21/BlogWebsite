@@ -588,71 +588,10 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.post-container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #f5e1c5; /* Beige background */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  color: #5c3d2e; /* Brown text */
-}
-
 .post-container .author {
   color: #5c3d2e; /* Brown text */
   font-size: 0.8rem;
   font-weight: 100;
-}
-
-/* Image styling */
-.post-image {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Title styling */
-.post-title {
-  font-family: "Dancing Script", cursive;
-  font-size: 35px;
-  font-weight: bold;
-  color: #5c3d2e; /* Brown text */
-  text-align: center;
-  margin: 20px 0;
-}
-
-.summary {
-  padding: 15px;
-  border-radius: 10px;
-  margin: 20px 0;
-  max-width: 800px;
-  text-align: left;
-}
-
-.summary h3 {
-  font-size: 25px;
-  color: #8b5e3b; /* Warm brown */
-  margin-bottom: 10px;
-  font-weight: 100;
-  font-family: "Dancing Script", cursive;
-}
-
-.summary div {
-  font-size: 16px;
-  color: #a76a6a; /* Dark text for readability */
-  line-height: 1.6;
-  font-family: "Dancing Script", cursive;
-}
-
-/* Content styling */
-.post-content {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #4a2e19; /* Dark brown text */
-  padding: 10px;
-  padding-top: 20px;
-  font-style: oblique;
 }
 
 /* Loading text */
@@ -677,7 +616,8 @@ body {
   border-radius: 20px;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 .edit-link:hover {
@@ -777,7 +717,7 @@ body {
 
 .featured-posts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  grid-template-columns: repeat(3, 0fr); /* 3 per row */
   gap: 40px;
   justify-content: center;
   padding: 10px 5%;
@@ -898,22 +838,209 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  padding: 16px;
+  padding: 8px;
 }
 
 .user-info {
   text-align: center;
-  margin-top: 12px;
+  margin-top: 0px;
 }
 
 .user-info h2 {
   font-family: "Dancing Script", cursive;
   font-size: 2rem;
-  margin: 6px 0;
+  margin: 0px 0;
   color: #5a3e2b;
 }
 
 .user-info h3 {
   font-size: 1.2rem;
   color: #7a5d44;
+  margin-bottom: 20px;
+}
+
+.blog-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.blog-icons svg {
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.options-icon {
+  position: absolute;
+  right: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #5a3e2b;
+}
+
+.options-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown-box {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  background-color: rgb(246, 224, 211);
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  z-index: 100;
+}
+
+.delete-button {
+  background-color: transparent;
+  color: #5a3e2b;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: background-color 0.2s ease;
+}
+
+.blog-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.blog-icons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.blog-icons button:hover {
+  transform: scale(1.1);
+}
+
+.post-detail-layout {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+.post-left {
+  flex: 3;
+}
+
+.post-right {
+  flex: 1;
+  max-width: 300px;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-left: 1px solid #ccc;
+  height: fit-content;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.comment {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.post-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.post-card {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-left,
+.post-right {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.post-left {
+  border-right: 1px solid #eee;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.author {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.summary {
+  margin: 1rem 0;
+}
+
+.options-icon {
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.dropdown {
+  margin-top: 0.5rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.edit-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: blue;
+  text-decoration: underline;
+}
+
+.post-right h3 {
+  margin-bottom: 1rem;
+}
+
+.comments-box {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.comment {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
 }

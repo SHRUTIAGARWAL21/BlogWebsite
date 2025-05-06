@@ -30,4 +30,16 @@ router.get("/searchByUser/:id", postController.getUserPost);
 //get post as per search
 router.get("/search", postController.searchPosts);
 
+//delete post
+router.delete("/delete/:id", postController.deletePost);
+
+//handle like on post
+router.post("/like/:id", postController.handleLikeToggle);
+
+//get all comment on post
+router.get("/comments/:id", postController.getComments);
+
+//handle comment on post
+router.post("/addComment/:id", postController.hanleComment);
+
 module.exports = router;

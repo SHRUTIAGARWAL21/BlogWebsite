@@ -16,6 +16,15 @@ const PostSchema = new Schema(
     content: String,
     cover: String,
     author: { type: Schema.Types.ObjectId, ref: "User" },
+
+    likeCount: {
+      type: Number,
+      default: 0,
+    },
+    commentCount: {
+      type: Number,
+      default: 0,
+    },
   },
   {
     timestamps: true,

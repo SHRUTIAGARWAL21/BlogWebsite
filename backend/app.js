@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: "https://blog-website-seven-gamma.vercel.app/",
+    origin: "https://blog-website-seven-gamma.vercel.app",
   })
 );
 app.use(cookieParser());

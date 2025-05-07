@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa6";
 import { FcLikePlaceholder } from "react-icons/fc";
 import { FaRegComment } from "react-icons/fa";
+import "./Css/blogPage.css";
 
 import { useState } from "react";
 
@@ -55,16 +56,15 @@ export default function Blog({
         <time className="blog-time">{formatISO9075(new Date(createdAt))}</time>
         <p className="blog-summary">{summary}</p>
 
-        <div className="blog-icons flex items-center gap-2 mt-2">
+        <div className="blog-icons">
           <button onClick={toggleLike}>
             {liked ? <FcLikePlaceholder /> : <FaRegHeart />}
           </button>
           <span>{likes} likes</span>
         </div>
-        <Link to={`/post/${_id}`}>
-          <FaRegComment />
+
+        <Link to={`/post/${_id}`} className="blog-comments-link">
           <h6>View all {comments} comments</h6>
-          <h6>Add a comment...</h6>
         </Link>
       </div>
     </div>

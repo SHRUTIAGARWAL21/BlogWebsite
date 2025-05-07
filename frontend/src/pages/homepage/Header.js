@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "./AuthContext";
+import { AuthContext } from "../../AuthContext";
 import NavBar from "./NavBar";
+import "../../Css/homePage.css";
 
 export default function Header() {
   const { user, logout } = useContext(AuthContext);

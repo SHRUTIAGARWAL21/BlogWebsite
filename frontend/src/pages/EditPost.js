@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navigate, useParams } from "react-router-dom";
-import NavBar from "../NavBar";
+import NavBar from "./homepage/NavBar";
 import Editor from "../Editor";
 
 export default function EditPost() {

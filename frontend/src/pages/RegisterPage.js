@@ -1,5 +1,7 @@
 import { useState } from "react";
-import NavBar from "../NavBar";
+import NavBar from "./homepage/NavBar";
+import { Link } from "react-router-dom";
+import "../Css/loginPage.css";
 
 export default function RegisterPage() {
   const [username, setUsername] = useState("");
@@ -44,6 +46,10 @@ export default function RegisterPage() {
             />
 
             <button>Register</button>
+            <div className="register-inline">
+              <h2>Already registered ?</h2>
+              <Link to="/login">Login</Link>
+            </div>
           </form>
         </div>
       </div>

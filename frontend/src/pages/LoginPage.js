@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthContext";
-import NavBar from "../NavBar";
+import NavBar from "./homepage/NavBar";
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
@@ -60,6 +61,10 @@ export default function LoginPage() {
               autoComplete="off"
             />
             <button type="submit">Login</button>
+            <div className="register-inline">
+              <h2>New user?</h2>
+              <Link to="/register">Register</Link>
+            </div>
           </form>
         </div>
       </div>

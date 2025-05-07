@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Navigate, useParams, Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../AuthContext";
-import NavBar from "../NavBar";
+import NavBar from "./homepage/NavBar";
 import Post from "../Post";
 
 export default function UserProfilePage() {

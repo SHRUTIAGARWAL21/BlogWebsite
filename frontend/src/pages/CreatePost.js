@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import Editor from "../Editor.js";
 import { Link } from "react-router-dom";
-import NavBar from "../NavBar.js";
+import NavBar from "./homepage/NavBar";
 
 export default function CreatePost() {
   const [title, setTitle] = useState("");

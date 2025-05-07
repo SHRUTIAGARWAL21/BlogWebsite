@@ -3,6 +3,7 @@ import { AuthContext } from "../AuthContext";
 import { Link } from "react-router-dom";
 import BlogPosts from "./BlogPosts";
 import { useEffect, useState } from "react";
+import "../Css/blogPage.css";
 
 export default function BlogPage() {
   const { user, logout } = useContext(AuthContext);

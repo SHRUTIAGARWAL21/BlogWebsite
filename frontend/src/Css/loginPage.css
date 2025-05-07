@@ -1,0 +1,246 @@
+.register-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* space between h2 and link */
+  font-size: 0.875rem; /* small font */
+  margin-top: 4px;
+}
+
+.register-inline h2 {
+  margin: 0;
+  font-size: inherit;
+}
+
+.register-inline a {
+  font-size: inherit;
+  color: #5a3e2b;
+  font-family: cursive;
+  text-decoration: none;
+}
+
+.register-inline a:hover {
+  text-decoration: underline;
+}
+
+/* Full-screen container */
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fadfc9;
+  /* Light beige background */
+}
+
+/* Centered box with background image */
+.register-box {
+  display: flex;
+  width: 60%;
+  height: 70vh;
+  background: url("https://i.pinimg.com/736x/de/e3/81/dee3811137d8415e47264ebbfa44ceeb.jpg")
+    no-repeat center center/cover;
+  border-radius: 15px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Left side - Welcome text */
+.welcome-section {
+  flex: 0.4; /* 40% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.welcome-section h1 {
+  font-size: 2.9rem;
+  font-weight: bold;
+  color: #5c3d2e;
+  font-family: "Dancing Script", cursive;
+}
+
+/* Right side - Register form */
+.register {
+  flex: 0.6; /* 60% width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* White semi-transparent form background */
+  padding: 40px;
+  border-radius: 0px 15px 15px 0px;
+}
+
+/* Form Inputs */
+.register input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f3e1c9;
+}
+
+/* Button */
+.register button {
+  width: 100%;
+  padding: 12px;
+  background: #5c3d2e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.register button:hover {
+  background: #3d2a20;
+}
+
+/* Full-screen container */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fadfc9;
+}
+
+/* Centered box with background image */
+.login-box {
+  display: flex;
+  width: 60%;
+  height: 70vh;
+  background: url("https://i.pinimg.com/736x/de/e3/81/dee3811137d8415e47264ebbfa44ceeb.jpg")
+    no-repeat center center/cover;
+  border-radius: 15px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Left side - Welcome text */
+.welcome-section {
+  flex: 0.4; /* 40% width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #5c3d2e;
+  font-family: "Dancing Script", cursive;
+}
+
+/* Right side - Login form */
+.login {
+  flex: 0.6; /* 60% width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* White semi-transparent form background */
+  padding: 40px;
+  border-radius: 0px 15px 15px 0px;
+}
+
+/* Form Inputs */
+.login input {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f3e1c9;
+}
+
+/* Button */
+.login button {
+  width: 100%;
+  padding: 12px;
+  background: #5c3d2e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background: #3d2a20;
+}
+
+@media (max-width: 1024px) {
+  .register-box,
+  .login-box {
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .register,
+  .login,
+  .welcome-section {
+    width: 100%;
+    border-radius: 0;
+    padding: 30px;
+  }
+
+  .register,
+  .login {
+    border-radius: 0 0 15px 15px;
+  }
+
+  .welcome-section {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .welcome-section h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-box,
+  .login-box {
+    width: 90%;
+  }
+
+  .register input,
+  .login input,
+  .register button,
+  .login button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .register-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    gap: 2px;
+  }
+
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+}

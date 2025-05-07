@@ -1,11 +1,11 @@
 import "./App.css";
 import Post from "./Post.js";
-import Header from "./Header.js";
-import Footer from "./Footer.js";
+import Header from "./pages/homepage/Header";
+import Footer from "./pages/homepage/Footer.js";
 import { Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./AuthContext";
-import Layout from "./Layout.js";
-import IndexPage from "./pages/IndexPages.js";
+import Layout from "./pages/homepage/Layout.js";
+import IndexPage from "./pages/homepage/IndexPages.js";
 import LoginPage from "./pages/LoginPage.js";
 import RegisterPage from "./pages/RegisterPage.js";
 import BlogPage from "./pages/BlogPage.js";

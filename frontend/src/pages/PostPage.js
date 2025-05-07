@@ -2,7 +2,7 @@ import { formatISO9075 } from "date-fns";
 import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../AuthContext";
-import NavBar from "../NavBar";
+import NavBar from "./homepage/NavBar";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa6";
 import { FcLikePlaceholder } from "react-icons/fc";

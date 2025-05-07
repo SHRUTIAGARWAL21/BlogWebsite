@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Post from "../Post";
+import Post from "../../Post";
+import "../../Css/homePage.css";
 
 export default function IndexPage() {
   const [categories, setCategories] = useState([]);
@@ -60,7 +61,7 @@ export default function IndexPage() {
     ];
 
     setCategories(categoriesData);
-  }, []); // Empty dependency array ensures the effect runs only once
+  }, [apiUrl]); // Empty dependency array ensures the effect runs only once
 
   return (
     <>
